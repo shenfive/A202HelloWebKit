@@ -24,28 +24,52 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9p-aE-TwA">
+                                <rect key="frame" x="354" y="44" width="60" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="l5u-Gy-kUE"/>
+                                    <constraint firstAttribute="height" constant="44" id="uQ5-i9-bRY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go"/>
+                                <connections>
+                                    <action selector="goPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Rf-bB-2G3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVK-oR-gEf">
+                                <rect key="frame" x="10" y="54" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
+                            <constraint firstItem="MVK-oR-gEf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="2m7-VG-Qie"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AZK-ce-nDF" secondAttribute="trailing" id="Alj-kk-17A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AZK-ce-nDF" secondAttribute="bottom" id="M22-NA-TgO"/>
                             <constraint firstItem="AZK-ce-nDF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S4e-94-PpN"/>
+                            <constraint firstItem="h9p-aE-TwA" firstAttribute="leading" secondItem="MVK-oR-gEf" secondAttribute="trailing" constant="10" id="VuC-sN-X5x"/>
+                            <constraint firstItem="MVK-oR-gEf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="a6n-Tm-QyL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h9p-aE-TwA" secondAttribute="trailing" id="boU-5f-ZPc"/>
                             <constraint firstItem="AZK-ce-nDF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="kWc-ad-orT"/>
+                            <constraint firstItem="h9p-aE-TwA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zMV-ky-MbU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="inputTF" destination="MVK-oR-gEf" id="Eta-pW-CHO"/>
                         <outlet property="theWebView" destination="AZK-ce-nDF" id="Kf8-SN-7hV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="50"/>
+            <point key="canvasLocation" x="-13.043478260869566" y="49.553571428571423"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

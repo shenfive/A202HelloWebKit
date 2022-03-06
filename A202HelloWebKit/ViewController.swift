@@ -10,6 +10,7 @@ import WebKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var inputTF: UITextField!
     @IBOutlet weak var theWebView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,17 @@ class ViewController: UIViewController {
   
     }
 
-
+    @IBAction func goPage(_ sender: Any) {
+        var urlString = inputTF.text ?? ""
+        urlString = "https://" + urlString
+        
+        
+        if let url = URL(string: urlString){
+            let request = URLRequest(url: url)
+            theWebView.load(request)
+        }
+        
+    }
+    
 }
 
